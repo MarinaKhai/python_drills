@@ -7,9 +7,12 @@ def iterative_factorial(nmb: int):
     return i
 
 if __name__ == "__main__":
+    print("\nEnter a positive integer, a negative or 0 to exit")
     while True:
-        our_nmb = int(input("Number: "))
-        
-        if our_nmb < 1:
-            break
-        print("Iterative factorial:", iterative_factorial(our_nmb))
+        try:
+            our_nmb = int(input("Number: "))
+            if our_nmb < 1:
+                break
+            print("Iterative factorial:", iterative_factorial(our_nmb))
+        except:
+            print("Invalid input")

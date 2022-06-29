@@ -17,9 +17,12 @@ def m_flip_ends(nmb: int):
     return sequence_list
 
 if __name__ == "__main__":
-    print("Enter a positive integer or 0 to exit")
+    print("\nEnter a positive integer, a negative or 0 to exit")
     while True:
-        our_nmb = int(input("Number: "))
-        if our_nmb == 0:
-            break
-        print(m_flip_ends(our_nmb))
+        try:
+            our_nmb = int(input("Number: "))
+            if our_nmb < 1:
+                break
+            print(m_flip_ends(our_nmb))
+        except:
+            print("Invalid input")
